@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Adder</title>
+   <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <nav>
+        <h1 class="heading mad">ADD TWO NUMBERS </h1>
+        <p class="mad">
+            Developed by Sanjana 
+        </p>
+    </nav>
+    <form class = "sumform mad" onsubmit="add()">
+        <input type="number" id="a" placeholder="first number">
+        <input type="number" id="b" placeholder="second number">
+        <button type="submit">Submit</button>
+    </form>
+    <p style="display: none" class="mad" id="ans">Sum : <input id="answer"></p>
+    <script>
+        function add(){
+            event.preventDefault();
+            let a=parseFloat(document.getElementById("a").value);
+            let b=parseFloat(document.getElementById("b").value);
+            document.getElementById("answer").value=a+b;
+            document.getElementById("ans").style.display="block";
+    }
+    </script>
+</body>
+</html>
